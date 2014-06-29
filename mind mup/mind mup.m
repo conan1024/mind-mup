@@ -27,48 +27,58 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    // UIScrollViewのインスタンス化
-    UIScrollView *scrollView = [[UIScrollView alloc]init];
-    scrollView.frame = self.view.bounds;
-    
-    // スクロールしたときバウンドさせないようにする
-    scrollView.bounces = NO;
-    
-    
-    // UIImageViewのインスタンス化
+        // UIImageViewのインスタンス化
     // サンプルとして画面に収まりきらないサイズ
-    CGRect rect = CGRectMake(0, 0, 1000, 1000);
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:rect];
+    //CGRect rect = CGRectMake(0, 0, 1000, 1000);
+    //UIImageView *imageView = [[UIImageView alloc]initWithFrame:rect];
     
     // 画像を設定
-    imageView.image = [UIImage imageNamed:@"lena.png"];
+    //imageView.image = [UIImage imageNamed:@"lena.png"];
     
     // UIScrollViewのインスタンスに画像を貼付ける
-    [scrollView addSubview:imageView];
+    //[scrollView addSubview:imageView];
     
     
     // UIScrollViewのコンテンツサイズを画像のサイズに合わせる
-    scrollView.contentSize = imageView.bounds.size;
+    //scrollView.contentSize = imageView.bounds.size;
     
     // UIScrollViewのインスタンスをビューに追加
-    [self.view addSubview:scrollView];
+    //[self.view addSubview:scrollView];
     
     // 表示されたときスクロールバーを点滅
-    [scrollView flashScrollIndicators];
+    //[scrollView flashScrollIndicators];
+    
+    
+    
+    // UIScrollViewのインスタンス化
+
+    effectscroll.frame = self.view.bounds;
+    
+    // スクロールしたときバウンドさせないようにする
+    effectscroll.bounces = NO;
 
     effectscroll.frame = self.view.bounds;
     
     effectscroll.bounces = NO;
     
-    //CGRect rect = CGRectMake(0, 0, 1000, 1000);
-    //UIImageView *imageView = [[UIImageView alloc]initWithFrame:rect];
+    effectscroll.delegate=self;
+    
+    effectscroll.minimumZoomScale = 0.1;
+    effectscroll.maximumZoomScale = 10;
+    
+
+    CGRect rect = CGRectMake(0, 0, 1000, 1000);
+    imageView = [[UIImageView alloc]initWithFrame:rect];
                               
     imageView.image = [UIImage imageNamed:@"www.png"];
                               
     [effectscroll addSubview:imageView];
                               
-    effectscroll .contentSize = imageView.bounds.size;
+    effectscroll.contentSize = imageView.bounds.size;
+    
+   effectscroll.showsHorizontalScrollIndicator = NO; //スクロールバー非表示
+   effectscroll.showsVerticalScrollIndicator = NO;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,6 +87,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return imageView;
+}
 /*
 #pragma mark - Navigation
 

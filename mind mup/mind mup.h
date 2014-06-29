@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface mind_mup : UIViewController{
+@interface mind_mup : UIViewController<UIScrollViewDelegate>{
     
     IBOutlet UIScrollView *effectscroll;
+    IBOutlet UIImageView *imageView;
 }
 
 @end
