@@ -78,7 +78,21 @@
     
    effectscroll.showsHorizontalScrollIndicator = NO; //スクロールバー非表示
    effectscroll.showsVerticalScrollIndicator = NO;
-
+    
+    UIButton *tapbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    tapbtn.frame=CGRectMake(imageView.frame.size.width/2,imageView.frame.size.height/2 , 100,100);
+    
+    [tapbtn setTitle:text forState:UIControlStateNormal];
+    [tapbtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [tapbtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [tapbtn setBackgroundImage:[UIImage imageNamed:@"bth"] forState:UIControlStateNormal];
+    
+    [tapbtn addTarget:self action:@selector(tap) forControlEvents:UIControlEventTouchUpInside];
+    
+    tapbtn.tag;
+    
+    [effectscroll addSubview:tapbtn];
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,12 +101,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
     return imageView;
 }
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -101,6 +114,8 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
+
+
 
 @end

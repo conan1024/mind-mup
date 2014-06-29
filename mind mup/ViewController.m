@@ -27,11 +27,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-for (int i = 0; i<8; i++){
+/*for (int i = 0; i<8; i++){
     
     UIBarButton  *tapbtn = [UIBarButton buttnWithType:UIBarButtonTypeCustom];
     
     
-}
+}*/
 
 @end
