@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95608C32194D738200CC887A /* mind mup.m in Sources */ = {isa = PBXBuildFile; fileRef = 95608C31194D738200CC887A /* mind mup.m */; };
+		95608C35194D73AA00CC887A /* kyouyu.m in Sources */ = {isa = PBXBuildFile; fileRef = 95608C34194D73AA00CC887A /* kyouyu.m */; };
+		95608C38194D741400CC887A /* kensaku.m in Sources */ = {isa = PBXBuildFile; fileRef = 95608C37194D741400CC887A /* kensaku.m */; };
+		95608C3A194D759500CC887A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95608C39194D759500CC887A /* MapKit.framework */; };
+		95608C3C194D8F7800CC887A /* www.png in Resources */ = {isa = PBXBuildFile; fileRef = 95608C3B194D8F7800CC887A /* www.png */; };
 		9582A4CC194D267A008FB822 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9582A4CB194D267A008FB822 /* Foundation.framework */; };
 		9582A4CE194D267A008FB822 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9582A4CD194D267A008FB822 /* CoreGraphics.framework */; };
 		9582A4D0194D267A008FB822 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9582A4CF194D267A008FB822 /* UIKit.framework */; };
@@ -34,6 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		95608C30194D738200CC887A /* mind mup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mind mup.h"; sourceTree = "<group>"; };
+		95608C31194D738200CC887A /* mind mup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "mind mup.m"; sourceTree = "<group>"; };
+		95608C33194D73AA00CC887A /* kyouyu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kyouyu.h; sourceTree = "<group>"; };
+		95608C34194D73AA00CC887A /* kyouyu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kyouyu.m; sourceTree = "<group>"; };
+		95608C36194D741400CC887A /* kensaku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kensaku.h; sourceTree = "<group>"; };
+		95608C37194D741400CC887A /* kensaku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kensaku.m; sourceTree = "<group>"; };
+		95608C39194D759500CC887A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		95608C3B194D8F7800CC887A /* www.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = www.png; sourceTree = "<group>"; };
 		9582A4C8194D267A008FB822 /* mind mup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mind mup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9582A4CB194D267A008FB822 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9582A4CD194D267A008FB822 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95608C3A194D759500CC887A /* MapKit.framework in Frameworks */,
 				9582A4CE194D267A008FB822 /* CoreGraphics.framework in Frameworks */,
 				9582A4D0194D267A008FB822 /* UIKit.framework in Frameworks */,
 				9582A4CC194D267A008FB822 /* Foundation.framework in Frameworks */,
@@ -82,6 +96,7 @@
 		9582A4BF194D267A008FB822 = {
 			isa = PBXGroup;
 			children = (
+				95608C3B194D8F7800CC887A /* www.png */,
 				9582A4D1194D267A008FB822 /* mind mup */,
 				9582A4F0194D267A008FB822 /* mind mupTests */,
 				9582A4CA194D267A008FB822 /* Frameworks */,
@@ -101,6 +116,7 @@
 		9582A4CA194D267A008FB822 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95608C39194D759500CC887A /* MapKit.framework */,
 				9582A4CB194D267A008FB822 /* Foundation.framework */,
 				9582A4CD194D267A008FB822 /* CoreGraphics.framework */,
 				9582A4CF194D267A008FB822 /* UIKit.framework */,
@@ -115,8 +131,14 @@
 				9582A4DA194D267A008FB822 /* AppDelegate.h */,
 				9582A4DB194D267A008FB822 /* AppDelegate.m */,
 				9582A4DD194D267A008FB822 /* Main.storyboard */,
+				95608C36194D741400CC887A /* kensaku.h */,
+				95608C37194D741400CC887A /* kensaku.m */,
+				95608C33194D73AA00CC887A /* kyouyu.h */,
+				95608C34194D73AA00CC887A /* kyouyu.m */,
 				9582A4E0194D267A008FB822 /* ViewController.h */,
 				9582A4E1194D267A008FB822 /* ViewController.m */,
+				95608C30194D738200CC887A /* mind mup.h */,
+				95608C31194D738200CC887A /* mind mup.m */,
 				9582A4E3194D267A008FB822 /* Images.xcassets */,
 				9582A4D2194D267A008FB822 /* Supporting Files */,
 			);
@@ -228,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95608C3C194D8F7800CC887A /* www.png in Resources */,
 				9582A4E4194D267A008FB822 /* Images.xcassets in Resources */,
 				9582A4D6194D267A008FB822 /* InfoPlist.strings in Resources */,
 				9582A4DF194D267A008FB822 /* Main.storyboard in Resources */,
@@ -251,7 +274,10 @@
 			files = (
 				9582A4E2194D267A008FB822 /* ViewController.m in Sources */,
 				9582A4DC194D267A008FB822 /* AppDelegate.m in Sources */,
+				95608C35194D73AA00CC887A /* kyouyu.m in Sources */,
 				9582A4D8194D267A008FB822 /* main.m in Sources */,
+				95608C38194D741400CC887A /* kensaku.m in Sources */,
+				95608C32194D738200CC887A /* mind mup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +482,7 @@
 				9582A4FC194D267A008FB822 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9582A4FD194D267A008FB822 /* Build configuration list for PBXNativeTarget "mind mupTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +491,7 @@
 				9582A4FF194D267A008FB822 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
