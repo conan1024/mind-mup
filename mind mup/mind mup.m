@@ -26,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+ 
+    
     // Do any additional setup after loading the view.
         // UIImageViewのインスタンス化
     // サンプルとして画面に収まりきらないサイズ
@@ -61,14 +63,15 @@
     
     effectscroll.bounces = NO;
     
+   
     effectscroll.delegate=self;
     
-    effectscroll.minimumZoomScale = 0.1;
-    effectscroll.maximumZoomScale = 10;
+    /*effectscroll.minimumZoomScale = 0.1;
+    effectscroll.maximumZoomScale = 10;*/
     
 
-    CGRect rect = CGRectMake(0, 0, 1000, 1000);
-    imageView = [[UIImageView alloc]initWithFrame:rect];
+    CGRect rect2 = CGRectMake(0, 0, 1000, 520);
+    imageView = [[UIImageView alloc]initWithFrame:rect2];
                               
     imageView.image = [UIImage imageNamed:@"www.png"];
                               
@@ -93,6 +96,39 @@
     tapbtn.tag;
     
     [effectscroll addSubview:tapbtn];*/
+    
+    // UITextFieldのインスタンスを生成
+    CGRect rect = CGRectMake(113,262, 100, 25);
+    UITextField *textField = [[UITextField alloc]initWithFrame:rect];
+    
+    // 枠線のスタイルを設定
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    
+    // テキストを左寄せにする
+    textField.textAlignment = UITextAlignmentLeft;
+    
+    // ラベルのテキストのフォントを設定
+    textField.font = [UIFont fontWithName:@"Helvetica" size:14];
+    
+    // プレースホルダ
+    textField.placeholder = @"名称未設定";
+    
+    textField.keyboardType=UIKeyboardTypeDefault;
+    
+    // キーボードの種類を設定
+    textField.keyboardType = UIKeyboardTypeDefault;
+    
+    // リターンキーの種類を設定
+    textField.returnKeyType = UIReturnKeyDefault;
+    
+    // 編集中にテキスト消去ボタンを表示
+    textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    
+    // デリゲートを設定
+    textField.delegate = self;
+    
+    // UITextFieldのインスタンスをビューに追加
+    [effectscroll addSubview:textField];
 }
 
 - (void)didReceiveMemoryWarning
@@ -115,7 +151,11 @@
     // Pass the selected object to the new view controller.
 }
 
-
-
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    // キーボードを隠す
+    [self.view endEditing:YES];
+    
+    return YES;
+}
 @end
