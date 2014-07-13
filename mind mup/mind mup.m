@@ -79,7 +79,7 @@
    effectscroll.showsHorizontalScrollIndicator = NO; //スクロールバー非表示
    effectscroll.showsVerticalScrollIndicator = NO;
     
-    UIButton *tapbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    /*UIButton *tapbtn = [UIButton buttonWithType:UIButtonTypeCustom];
     
     tapbtn.frame=CGRectMake(imageView.frame.size.width/2,imageView.frame.size.height/2 , 100,100);
     
@@ -92,7 +92,7 @@
     
     tapbtn.tag;
     
-    [effectscroll addSubview:tapbtn];
+    [effectscroll addSubview:tapbtn];*/
 }
 
 - (void)didReceiveMemoryWarning
