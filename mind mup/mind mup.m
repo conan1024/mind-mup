@@ -26,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+
  
     
     // Do any additional setup after loading the view.
@@ -99,7 +101,7 @@
     
     // UITextFieldのインスタンスを生成
     CGRect rect = CGRectMake(113,262, 100, 25);
-    UITextField *textField = [[UITextField alloc]initWithFrame:rect];
+    textField = [[UITextField alloc]initWithFrame:rect];
     
     // 枠線のスタイルを設定
     textField.borderStyle = UITextBorderStyleRoundedRect;
@@ -129,6 +131,50 @@
     
     // UITextFieldのインスタンスをビューに追加
     [effectscroll addSubview:textField];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    UILongPressGestureRecognizer *longPressGesture =
+    [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(view_LongPres:)];
+    
+    //longPressGesture.minimumPressDuration = 2.0;
+    
+    
+   // UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPressGesture:)];
+    longPressGesture.delegate = self;
+    //[_AlbumCollection addGestureRecognizer:longPressGestureRecognizer];
+    
+    
+    // ビューにジェスチャーを追加
+    [textField addGestureRecognizer:longPressGesture];
+}
+
+- (void) view_LongPres:(UILongPressGestureRecognizer *)sender
+{
+   // NSLog(@"長押しがされました．");
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"長押し終了のタイミング");
+    }
+    else if (sender.state == UIGestureRecognizerStateBegan){
+        NSLog(@"長押し開始のタイミング");
+        [self set];
+        //214*114
+
+    }
+}
+
+-(void)set{
+    UIView *uv = [[UIView alloc] init];
+    uv.frame = self.view.bounds;
+    uv.backgroundColor = [UIColor redColor];
+    [self.view addSubview:uv];
+}
+
+
+//すたっく
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning

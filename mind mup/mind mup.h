@@ -13,6 +13,10 @@
     
     IBOutlet UIScrollView *effectscroll;
     IBOutlet UIImageView *imageView;
+    
+    UITextField *textField;
 }
+
+-(void)set;
 
 @end
